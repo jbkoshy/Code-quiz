@@ -28,4 +28,33 @@ THEN I can save my initials and my score
 
 #Mock-Up
 The following animation demonstrates the application functionality:
-https://github.com/the-Coding-Boot-Camp-at-UT/UTA-VIRT-FSF-PT-09-2022-U-LOLC/raw/main/04-Web-APIs/02-Challenge/Assets/04-web-apis-homework-demo.gif
+
+A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.
+
+The following animation demonstrates the application functionality:
+
+
+      
+        
+          
+            
+          
+        
+        
+        
+          
+            
+              
+            
+            
+              
+              
+            
+          
+          
+            
+              
+            
+          
+        
+      
