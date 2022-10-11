@@ -29,9 +29,8 @@ THEN I can save my initials and my score
 #Mock-Up
 The following animation demonstrates the application functionality:
 
-A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.
+![image](https://user-images.githubusercontent.com/112911066/195008457-2b715875-83a8-47de-bd36-80feb2fa6ac3.png)
 
-The following animation demonstrates the application functionality:
 
 
       
