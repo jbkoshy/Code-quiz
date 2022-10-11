@@ -1,4 +1,4 @@
-// Gathering HTML elements for manipulation
+// Bringing HTML elements together for manipulation
 var quizBody = document.getElementById("quiz");
 var resultsEl = document.getElementById("result");
 var finalScoreEl = document.getElementById("finalScore");
@@ -19,55 +19,55 @@ var buttonB = document.getElementById("b");
 var buttonC = document.getElementById("c");
 var buttonD = document.getElementById("d");
 
-// Quiz question object
+// Quiz questions
 var quizQuestions = [{
-    question: "How many elements can you apply an 'ID' attribute to?",
-    choiceA: "As many as you want",
+    question: "How many rings does Kevin Durant have?",
+    choiceA: "2",
     choiceB: "3",
     choiceC: "1",
-    choiceD: "128",
-    correctAnswer: "c"},
+    choiceD: "3,000",
+    correctAnswer: "a"},
   {
-    question: "What does DOM stand for?",
-    choiceA: "Document Object Model",
-    choiceB: "Display Object Management",
-    choiceC: "Digital Ordinance Model",
-    choiceD: "Desktop Oriented Mode",
+    question: "What team is LeBron James currently on?",
+    choiceA: "Los Angeles Lakers",
+    choiceB: "Chicago Bulls",
+    choiceC: "Cleveland Cavaliers",
+    choiceD: "Miami Heat",
     correctAnswer: "a"},
    {
-    question: "What is used primarily to add styling to a web page?",
-    choiceA: "HTML",
-    choiceB: "CSS",
-    choiceC: "Python",
-    choiceD: "React.js",
-    correctAnswer: "b"},
-    {
-    question: "What HTML tags are JavaScript code wrapped in?",
-    choiceA: "&lt;div&gt;",
-    choiceB: "&lt;link&gt;",
-    choiceC: "&lt;head&gt;",
-    choiceD: "&lt;script&gt;",
-    correctAnswer: "d"},
-    {
-    question: "When is localStorage data cleared?",
-    choiceA: "No expiration time",
-    choiceB: "On page reload",
-    choiceC: "On browser close",
-    choiceD: "On computer restart",
-    correctAnswer: "a"},  
-    {
-    question: "What does WWW stand for?",
-    choiceA: "Web World Workings",
-    choiceB: "Weak Winter Wind",
-    choiceC: "World Wide Web",
-    choiceD: "Wendy Wants Waffles",
+    question: "What team drafted James Harden?",
+    choiceA: "Philadelphia 76ers",
+    choiceB: "Houston Rockets",
+    choiceC: "Oklahoma City Thunder",
+    choiceD: "Brooklyn Nets",
     correctAnswer: "c"},
     {
-    question: "What HTML attribute references an external JavaScript file?",
-    choiceA: "href",
-    choiceB: "src",
-    choiceC: "class",
-    choiceD: "index",
+    question: "How many rings does Stephen Curry have??",
+    choiceA: "4",
+    choiceB: "3",
+    choiceC: "2",
+    choiceD: "1",
+    correctAnswer: "a"},
+    {
+    question: "When was Paulo Banchero drafted?",
+    choiceA: "2019",
+    choiceB: "2020",
+    choiceC: "2021",
+    choiceD: "2022",
+    correctAnswer: "d"},  
+    {
+    question: "What player coins the nickname, The Klaw?",
+    choiceA: "LeBron James",
+    choiceB: "Kevin Durant",
+    choiceC: "Kawhi Leonard",
+    choiceD: "Joel Embiid",
+    correctAnswer: "c"},
+    {
+    question: "How old is Russell Westbrook as of October 2022?",
+    choiceA: "31",
+    choiceB: "33",
+    choiceC: "32",
+    choiceD: "34",
     correctAnswer: "b"},
         
     
@@ -75,12 +75,12 @@ var quizQuestions = [{
 // Other global variables
 var finalQuestionIndex = quizQuestions.length;
 var currentQuestionIndex = 0;
-var timeLeft = 76;
+var timeLeft = 60;
 var timerInterval;
 var score = 0;
 var correct;
 
-// This function cycles through the object array containing the quiz questions to generate the questions and answers.
+// This function will cycle through the object array containing the quiz questions to generate the questions and answers.
 function generateQuizQuestion(){
     gameoverDiv.style.display = "none";
     if (currentQuestionIndex === finalQuestionIndex){
@@ -103,7 +103,7 @@ function startQuiz(){
     //Timer
     timerInterval = setInterval(function() {
         timeLeft--;
-        quizTimer.textContent = "Time left: " + timeLeft;
+        quizTimer.textContent = "Seconds left: " + timeLeft;
     
         if(timeLeft === 0) {
           clearInterval(timerInterval);
@@ -188,7 +188,7 @@ function replayQuiz(){
     highscoreContainer.style.display = "none";
     gameoverDiv.style.display = "none";
     startQuizDiv.style.display = "flex";
-    timeLeft = 76;
+    timeLeft = 60;
     score = 0;
     currentQuestionIndex = 0;
 }
@@ -199,12 +199,12 @@ function checkAnswer(answer){
 
     if (answer === correct && currentQuestionIndex !== finalQuestionIndex){
         score++;
-        alert("That Is Correct!");
+        alert("Good Job! That Is Correct!");
         currentQuestionIndex++;
         generateQuizQuestion();
         //display in the results div that the answer is correct.
     }else if (answer !== correct && currentQuestionIndex !== finalQuestionIndex){
-        alert("That Is Incorrect.")
+        alert("Sorry, That Is Incorrect.")
         currentQuestionIndex++;
         generateQuizQuestion();
         //display in the results div that the answer is wrong.

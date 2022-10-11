@@ -1,5 +1,5 @@
 :root{
-background-color: rgb(224, 233, 253);
+background-color: rgb(226, 81, 81);
 }
 
 li{
@@ -38,7 +38,7 @@ input{
   button {
     display: inline-block;
     font-family: sans-serif;
-    background-color: #5e6df1;
+    background-color: #e02121;
     border-radius: 10px;
     border: 3px double #cccccc;
     color: #eeeeee;
@@ -50,7 +50,7 @@ input{
   }
 
   button:hover{
-      box-shadow: 4px 3px 6px #4450bd;
+      box-shadow: 4px 3px 6px #bd8b44;
   }
 
 #startpage{
@@ -61,8 +61,8 @@ input{
 
 #timer{
     font-family: sans-serif;
-    background-color: #5a69f0;
-    color: #eeeeee;
+    background-color: #982255;
+    color: #e8b5b5;
     font-size: x-large;
     text-shadow: .5px .5px black;
     text-align: center;
@@ -94,7 +94,7 @@ input{
     border-color: silver;
     border-bottom-style: groove;
     padding-bottom: .3rem;
-    background: lightsteelblue;
+    background: rgb(88, 66, 213);
 }
 
 #highscore-header{
@@ -102,7 +102,7 @@ input{
     justify-content: space-around;
     border-bottom-style: outset;
     margin-bottom: .5rem;
-    background-color: #5e6df1;
+    background-color: #2b87c9;
     color: #eeeeee;
     font-family: sans-serif;
 }
