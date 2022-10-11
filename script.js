@@ -202,12 +202,12 @@ function checkAnswer(answer){
         alert("Good Job! That Is Correct!");
         currentQuestionIndex++;
         generateQuizQuestion();
-        //display in the results div that the answer is correct.
+        //Results show that the answer is correct.
     }else if (answer !== correct && currentQuestionIndex !== finalQuestionIndex){
         alert("Sorry, That Is Incorrect.")
         currentQuestionIndex++;
         generateQuizQuestion();
-        //display in the results div that the answer is wrong.
+        //Results show that the answer is wrong.
     }else{
         showScore();
     }
