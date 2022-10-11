@@ -21,54 +21,54 @@ var buttonD = document.getElementById("d");
 
 // Quiz questions
 var quizQuestions = [{
-    question: "How many rings does Kevin Durant have?",
-    choiceA: "2",
-    choiceB: "3",
-    choiceC: "1",
-    choiceD: "3,000",
-    correctAnswer: "a"},
+    question: "Inside which HTML element do we put the JavaScript?",
+    choiceA: "< scripting >",
+    choiceB: "< js >",
+    choiceC: "< script >",
+    choiceD: "< javascript >",
+    correctAnswer: "c"},
   {
-    question: "What team is LeBron James currently on?",
-    choiceA: "Los Angeles Lakers",
-    choiceB: "Chicago Bulls",
-    choiceC: "Cleveland Cavaliers",
-    choiceD: "Miami Heat",
-    correctAnswer: "a"},
+    question: "Where is the correct place to insert a JavaScript?",
+    choiceA: "The < head > section",
+    choiceB: "The < footer > section",
+    choiceC: "the < body > section",
+    choiceD: "both a and b",
+    correctAnswer: "c"},
    {
-    question: "What team drafted James Harden?",
-    choiceA: "Philadelphia 76ers",
-    choiceB: "Houston Rockets",
-    choiceC: "Oklahoma City Thunder",
-    choiceD: "Brooklyn Nets",
+    question: "How do you write `Hello World` in an alert box?",
+    choiceA: "msg(`Hello World`);",
+    choiceB: "msgBox(`Hello World`);",
+    choiceC: "alertBox(`Hello World`);",
+    choiceD: "alert(`Hello World`);",
+    correctAnswer: "d"},
+    {
+    question: "How to write an IF statement in JavaScript?",
+    choiceA: "if i == 5 then",
+    choiceB: "if i = 5",
+    choiceC: "if i = 5 then",
+    choiceD: "if (i == 5)",
+    correctAnswer: "d"},
+    {
+    question: "How does a WHILE loop start?",
+    choiceA: "while i = 1 to 10",
+    choiceB: "while (i <= 10)",
+    choiceC: "while (i <= 10; i++)",
+    choiceD: "None of the answers above",
+    correctAnswer: "b"},  
+    {
+    question: "How does a FOR loop start?",
+    choiceA: "for (i = 0; i <= 5)",
+    choiceB: "for (i <= 5; i++)",
+    choiceC: "for i = 1 to 5",
+    choiceD: "for (i = 0; i <= 5; i++)",
+    correctAnswer: "d"},
+    {
+    question: "How can you add a comment in a JavaScript?",
+    choiceA: "`This is a comment",
+    choiceB: "< !--This is a comment-- >",
+    choiceC: "//This is a comment",
+    choiceD: "#This is a comment#",
     correctAnswer: "c"},
-    {
-    question: "How many rings does Stephen Curry have??",
-    choiceA: "4",
-    choiceB: "3",
-    choiceC: "2",
-    choiceD: "1",
-    correctAnswer: "a"},
-    {
-    question: "When was Paulo Banchero drafted?",
-    choiceA: "2019",
-    choiceB: "2020",
-    choiceC: "2021",
-    choiceD: "2022",
-    correctAnswer: "d"},  
-    {
-    question: "What player coins the nickname, The Klaw?",
-    choiceA: "LeBron James",
-    choiceB: "Kevin Durant",
-    choiceC: "Kawhi Leonard",
-    choiceD: "Joel Embiid",
-    correctAnswer: "c"},
-    {
-    question: "How old is Russell Westbrook as of October 2022?",
-    choiceA: "31",
-    choiceB: "33",
-    choiceC: "32",
-    choiceD: "34",
-    correctAnswer: "b"},
         
     
     ];
@@ -112,7 +112,7 @@ function startQuiz(){
       }, 1000);
     quizBody.style.display = "block";
 }
-// This function is the end page screen that displays your score after either completeing the quiz or upon timer run out
+// This function will show score after completing quiz.
 function showScore(){
     quizBody.style.display = "none"
     gameoverDiv.style.display = "flex";
@@ -121,8 +121,8 @@ function showScore(){
     finalScoreEl.innerHTML = "You got " + score + " out of " + quizQuestions.length + " correct!";
 }
 
-// On click of the submit button, we run the function highscore that saves and stringifies the array of high scores already saved in local stoage
-// as well as pushing the new user name and score into the array we are saving in local storage. Then it runs the function to show high scores.
+// After clicking submit button, we run the function highscore that saves and stringifies the array of high scores that are already saved in local storage
+// as well as pushing the new user name and score into the array that is being saved in local storage. Then it runs the function to show high scores.
 submitScoreBtn.addEventListener("click", function highscore(){
     
     
@@ -165,7 +165,7 @@ function generateHighscores(){
     }
 }
 
-// This function displays the high scores page while hiding all of the other pages from 
+// This function will only show the high score page
 function showHighscore(){
     startQuizDiv.style.display = "none"
     gameoverDiv.style.display = "none";
@@ -176,7 +176,7 @@ function showHighscore(){
     generateHighscores();
 }
 
-// This function clears the local storage of the high scores as well as clearing the text from the high score board
+// This function clears the local storage and text from high score boards
 function clearScore(){
     window.localStorage.clear();
     highscoreDisplayName.textContent = "";
@@ -193,7 +193,7 @@ function replayQuiz(){
     currentQuestionIndex = 0;
 }
 
-// This function checks the response to each answer 
+// This function gives response to each answer that is either correct or incorrect
 function checkAnswer(answer){
     correct = quizQuestions[currentQuestionIndex].correctAnswer;
 
@@ -213,5 +213,5 @@ function checkAnswer(answer){
     }
 }
 
-// This button starts the quiz!
+// This button will start the quiz
 startQuizButton.addEventListener("click",startQuiz);
